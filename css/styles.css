@@ -1,0 +1,87 @@
+
+.navBar{
+  background-color: #FED766; 
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a{
+  float: left;
+  color: #272727;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18pt;
+
+}
+
+/*Background color change during hover state*/
+.navBar a:hover{
+  background-color: #272727;
+  color: #FED766;
+}
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon{
+  display: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px){
+/*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+  .navBar a:not(:first-child){
+    display: none;
+  }
+/*Brings the menu icon into view and floats it to the right*/
+  .navBar a.icon{
+    display: block; float: right;
+  }
+  
+/*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+/*Removes the originally set float and brings them to view*/
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+#main-image {
+    width: 100%;
+}
+
+body {
+    background-color: #272727;
+    background-image: linear-gradient(to right, #222,#272727,#272727,#272727,#272727,#272727,#272727,#222);
+    color: #EFF1F3;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 15pt;
+}
+
+
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+a:hover {
+      color: inherit; /* blue colors for links too */
+      text-decoration: inherit; /* no underline */
+}
+
+
+.biolink {
+    color: #FED766;
+}
